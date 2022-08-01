@@ -1,8 +1,13 @@
 import "./App.css";
 import Input from "./components/Input";
 import Item from "./components/Item";
+import { uuid } from "uuid";
 function App() {
-  const items = ["milk", "chocolate", "banana"];
+  const items = [
+    { name: "milk", id: uuid() },
+    { name: "chocolate", id: uuid() },
+    { name: "banana", id: uuid() },
+  ];
   return (
     <div className="app">
       <div className="container">

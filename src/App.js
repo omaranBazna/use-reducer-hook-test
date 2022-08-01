@@ -8,9 +8,11 @@ function App() {
       <div className="container">
         <Input></Input>
 
-        {items.map((item, index) => {
-          return <Item key={index} text={item} />;
-        })}
+        <div className="items">
+          {items.map((item, index) => {
+            return <Item key={index} text={item} />;
+          })}
+        </div>
       </div>
     </div>
   );

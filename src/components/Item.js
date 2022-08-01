@@ -1,6 +1,6 @@
 const Item = ({ text }) => {
   return (
-    <div>
+    <div className="item">
       {text}
       <button>x</button>
     </div>

@@ -2,7 +2,12 @@ const Input = ({ dispatcher }) => {
   return (
     <form className="input">
       <input type="text"></input>
-      <button type="submit">add</button>
+      <button
+        onClick={dispatcher({ type: "add", payload: "HelloReducer" })}
+        type="submit"
+      >
+        add
+      </button>
     </form>
   );
 };

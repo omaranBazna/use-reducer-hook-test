@@ -9,7 +9,8 @@ function App() {
      switch (action.type){
      case "add":
        return{
-        
+        ...state,
+        items:state.items.concat([{name:action.payload ,id:uuid()}])
        }
      case "remove":
 

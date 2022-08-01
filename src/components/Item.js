@@ -4,7 +4,6 @@ const Item = ({ text, Itemid, dispatcher }) => {
       {text}
       <button
         onClick={() => {
-          console.log("clicked");
           dispatcher({ type: "remove", payload: { id: Itemid } });
         }}
       >

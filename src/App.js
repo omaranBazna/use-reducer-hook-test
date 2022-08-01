@@ -40,7 +40,7 @@ function App() {
             return (
               <Item
                 key={item.id}
-                id={item.id}
+                Itemid={item.id}
                 text={item.name}
                 dispatcher={dispatcher}
               />

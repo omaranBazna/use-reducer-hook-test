@@ -13,9 +13,12 @@ function App() {
         items:state.items.concat([{name:action.payload ,id:uuid()}])
        }
      case "remove":
-
+       return {
+        ...state,
+        items:state.items.filter((item)=>item.id !=action.payload.id)
+       }
      default:
-
+        return state
      }
   }
   const initState={

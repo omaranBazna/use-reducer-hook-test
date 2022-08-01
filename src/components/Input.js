@@ -1,4 +1,4 @@
-const Input = () => {
+const Input = ({ dispatcher }) => {
   return (
     <form className="input">
       <input type="text"></input>

@@ -1,6 +1,6 @@
 const Input = () => {
   return (
-    <form>
+    <form className="input">
       <input type="text"></input>
       <button type="submit">add</button>
     </form>

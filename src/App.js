@@ -27,13 +27,15 @@ function App() {
       { name: "banana", id: uuid() },
     ],
   };
+
+  const [state, dispatcher] = useReducer(reducer, initState);
   return (
     <div className="app">
       <div className="container">
         <Input></Input>
 
         <div className="items">
-          {items.map((item) => {
+          {state.items.map((item) => {
             return <Item key={item.id} text={item.name} />;
           })}
         </div>

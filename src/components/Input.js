@@ -6,3 +6,4 @@ const Input = () => {
     </form>
   );
 };
+export default Input;

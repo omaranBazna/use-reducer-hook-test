@@ -1,7 +1,7 @@
 import "./App.css";
 import Input from "./components/Input";
 import Item from "./components/Item";
-import { uuid } from "uuid";
+import { v4 as uuid } from "uuid";
 function App() {
   const items = [
     { name: "milk", id: uuid() },

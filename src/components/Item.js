@@ -1,8 +1,15 @@
-const Item = ({ text }) => {
+const Item = ({ text, Itemid, dispatcher }) => {
   return (
     <div className="item">
       {text}
-      <button>x</button>
+      <button
+        onClick={() => {
+          console.log("clicked");
+          dispatcher({ type: "remove", payload: { id: Itemid } });
+        }}
+      >
+        x
+      </button>
     </div>
   );
 };

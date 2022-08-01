@@ -12,6 +12,7 @@ function App() {
           items: state.items.concat([{ name: action.payload, id: uuid() }]),
         };
       case "remove":
+        console.log("remove");
         return {
           ...state,
           items: state.items.filter((item) => item.id != action.payload.id),
@@ -36,7 +37,14 @@ function App() {
 
         <div className="items">
           {state.items.map((item) => {
-            return <Item key={item.id} text={item.name} />;
+            return (
+              <Item
+                key={item.id}
+                id={item.id}
+                text={item.name}
+                dispatcher={dispatcher}
+              />
+            );
           })}
         </div>
       </div>

@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <Input></Input>
+        <Input dispatcher={dispatcher}></Input>
 
         <div className="items">
           {state.items.map((item) => {

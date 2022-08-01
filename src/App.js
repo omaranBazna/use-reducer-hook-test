@@ -4,30 +4,29 @@ import Item from "./components/Item";
 import { v4 as uuid } from "uuid";
 import { useReducer } from "react";
 function App() {
-
-  const reducer=(state,action)=>{
-     switch (action.type){
-     case "add":
-       return{
-        ...state,
-        items:state.items.concat([{name:action.payload ,id:uuid()}])
-       }
-     case "remove":
-       return {
-        ...state,
-        items:state.items.filter((item)=>item.id !=action.payload.id)
-       }
-     default:
-        return state
-     }
-  }
-  const initState={
- items : [
-    { name: "milk", id: uuid() },
-    { name: "chocolate", id: uuid() },
-    { name: "banana", id: uuid() },
-  ];
-}
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "add":
+        return {
+          ...state,
+          items: state.items.concat([{ name: action.payload, id: uuid() }]),
+        };
+      case "remove":
+        return {
+          ...state,
+          items: state.items.filter((item) => item.id != action.payload.id),
+        };
+      default:
+        return state;
+    }
+  };
+  const initState = {
+    items: [
+      { name: "milk", id: uuid() },
+      { name: "chocolate", id: uuid() },
+      { name: "banana", id: uuid() },
+    ],
+  };
   return (
     <div className="app">
       <div className="container">

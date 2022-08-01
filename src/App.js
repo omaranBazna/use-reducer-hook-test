@@ -7,6 +7,10 @@ function App() {
     <div className="app">
       <div className="container">
         <Input></Input>
+
+        {items.map((item, index) => {
+          return <Item key={index} text={item} />;
+        })}
       </div>
     </div>
   );

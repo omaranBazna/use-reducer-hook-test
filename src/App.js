@@ -14,8 +14,8 @@ function App() {
         <Input></Input>
 
         <div className="items">
-          {items.map((item, index) => {
-            return <Item key={index} text={item} />;
+          {items.map((item) => {
+            return <Item key={item.id} text={item.name} />;
           })}
         </div>
       </div>
